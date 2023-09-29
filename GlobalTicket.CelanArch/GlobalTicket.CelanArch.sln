@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{38686357
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{296A963D-68B7-41AC-B130-9EDB05168E79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalTicket.CelanArch.Domain", "GlobalTicket.CelanArch.Domain\GlobalTicket.CelanArch.Domain.csproj", "{765E9C06-B771-43F7-8D1B-9A6EC8A20174}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalTicket.CelanArch.Domain", "..\src\GlobalTicket.CelanArch.Domain\GlobalTicket.CelanArch.Domain.csproj", "{765E9C06-B771-43F7-8D1B-9A6EC8A20174}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
