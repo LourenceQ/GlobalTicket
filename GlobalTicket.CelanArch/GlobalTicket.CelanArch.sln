@@ -7,6 +7,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{AA1F96F6-EFD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalTicket.CelanArch.API", "..\src\GlobalTicket.CelanArch.API\GlobalTicket.CelanArch.API.csproj", "{DAD8E541-7886-4A07-B1E1-E4ED1A556B46}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{77AB634E-18A0-48BD-8300-90E140BB06C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{814DA49D-53E4-4339-8C9C-D2DC31C77CD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{38686357-5F99-4ADC-AED7-44DC0FC0CC84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{296A963D-68B7-41AC-B130-9EDB05168E79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalTicket.CelanArch.Domain", "GlobalTicket.CelanArch.Domain\GlobalTicket.CelanArch.Domain.csproj", "{765E9C06-B771-43F7-8D1B-9A6EC8A20174}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +27,17 @@ Global
 		{DAD8E541-7886-4A07-B1E1-E4ED1A556B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAD8E541-7886-4A07-B1E1-E4ED1A556B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAD8E541-7886-4A07-B1E1-E4ED1A556B46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{765E9C06-B771-43F7-8D1B-9A6EC8A20174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{765E9C06-B771-43F7-8D1B-9A6EC8A20174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{765E9C06-B771-43F7-8D1B-9A6EC8A20174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{765E9C06-B771-43F7-8D1B-9A6EC8A20174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DAD8E541-7886-4A07-B1E1-E4ED1A556B46} = {AA1F96F6-EFD9-4B77-9AC1-856EF19155DB}
+		{765E9C06-B771-43F7-8D1B-9A6EC8A20174} = {77AB634E-18A0-48BD-8300-90E140BB06C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1BA4116B-2F15-422F-8A76-09AF7821B4CB}
