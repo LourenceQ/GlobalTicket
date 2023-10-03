@@ -9,5 +9,7 @@ public class MappingProfile : Profile
     public MappingProfile()
     {
         CreateMap<Event, EventListVm>().ReverseMap();
+        CreateMap<Event, EventDetailVm>().ReverseMap();
+        CreateMap<Category, CategoryDto>();
     }
 }
