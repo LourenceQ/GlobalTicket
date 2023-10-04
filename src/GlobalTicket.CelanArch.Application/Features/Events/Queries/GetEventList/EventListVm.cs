@@ -1,4 +1,4 @@
-﻿namespace GlobalTicket.CelanArch.Application.Features.Events;
+﻿namespace GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventList;
 
 public class EventListVm
 {

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using GlobalTicket.CelanArch.Application.Features.Events;
+using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventDetail;
+using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventList;
 using GloboTicket.TicketManagement.Domain.Entities;
 
 namespace GlobalTicket.CelanArch.Application.Profiles;

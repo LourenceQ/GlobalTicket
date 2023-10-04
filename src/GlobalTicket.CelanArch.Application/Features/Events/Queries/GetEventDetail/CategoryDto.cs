@@ -1,4 +1,4 @@
-﻿namespace GlobalTicket.CelanArch.Application.Features.Events;
+﻿namespace GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventDetail;
 
 public class CategoryDto
 {

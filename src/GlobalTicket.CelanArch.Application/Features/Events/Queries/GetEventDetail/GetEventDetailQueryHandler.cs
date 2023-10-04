@@ -3,7 +3,7 @@ using GlobalTicket.CelanArch.Application.Contracts.Persistance;
 using GloboTicket.TicketManagement.Domain.Entities;
 using MediatR;
 
-namespace GlobalTicket.CelanArch.Application.Features.Events;
+namespace GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventDetail;
 
 public class GetEventDetailQueryHandler : IRequestHandler<GetEventDetailQuery, EventDetailVm>
 {

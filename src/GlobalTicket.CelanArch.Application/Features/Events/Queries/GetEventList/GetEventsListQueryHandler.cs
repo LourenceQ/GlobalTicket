@@ -2,7 +2,7 @@
 using GlobalTicket.CelanArch.Application.Contracts.Persistance;
 using MediatR;
 
-namespace GlobalTicket.CelanArch.Application.Features.Events;
+namespace GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventList;
 
 public class GetEventsListQueryHandler : IRequestHandler<GetEventsListQuery, List<EventListVm>>
 {
