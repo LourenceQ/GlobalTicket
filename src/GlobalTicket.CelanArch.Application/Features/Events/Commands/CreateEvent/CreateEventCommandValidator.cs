@@ -1,10 +1,15 @@
 ﻿using FluentValidation;
+using GlobalTicket.CelanArch.Application.Contracts.Persistance;
 
 namespace GlobalTicket.CelanArch.Application.Features.Events.Commands.CreateEvent;
 public class CreateEventCommandValidator : AbstractValidator<CreateEventCommand>
 {
-    public CreateEventCommandValidator()
+    private readonly IEventRepository _eventRepository;
+
+    public CreateEventCommandValidator(IEventRepository eventRepository)
     {
+        _eventRepository = eventRepository;
+
         RuleFor(p => p.Name)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()
@@ -18,5 +23,14 @@ public class CreateEventCommandValidator : AbstractValidator<CreateEventCommand>
         RuleFor(p => p.Price)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .GreaterThan(0);
+
+        RuleFor(e => e)
+                .MustAsync(EventNameAndDateUnique)
+                .WithMessage("An event with the same name and date already exists.");
+    }
+
+    private async Task<bool> EventNameAndDateUnique(CreateEventCommand e, CancellationToken token)
+    {
+        return !(await _eventRepository.IsEventNameAndDateUnique(e.Name, e.Date));
     }
 }
