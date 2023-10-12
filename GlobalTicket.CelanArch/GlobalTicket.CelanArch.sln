@@ -17,7 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{296A963D-68B7-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalTicket.CelanArch.Domain", "..\src\GlobalTicket.CelanArch.Domain\GlobalTicket.CelanArch.Domain.csproj", "{765E9C06-B771-43F7-8D1B-9A6EC8A20174}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalTicket.CelanArch.Application", "..\src\GlobalTicket.CelanArch.Application\GlobalTicket.CelanArch.Application.csproj", "{086A47D9-C100-4694-8E39-D318B4963BDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalTicket.CelanArch.Application", "..\src\GlobalTicket.CelanArch.Application\GlobalTicket.CelanArch.Application.csproj", "{086A47D9-C100-4694-8E39-D318B4963BDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalTicket.TicketManagement.Persistence", "..\src\GlobalTicket.TicketManagement.Persistence\GlobalTicket.TicketManagement.Persistence.csproj", "{11594139-9BDA-4DC7-9936-3556067C6B8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{086A47D9-C100-4694-8E39-D318B4963BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{086A47D9-C100-4694-8E39-D318B4963BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{086A47D9-C100-4694-8E39-D318B4963BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11594139-9BDA-4DC7-9936-3556067C6B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11594139-9BDA-4DC7-9936-3556067C6B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11594139-9BDA-4DC7-9936-3556067C6B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11594139-9BDA-4DC7-9936-3556067C6B8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{DAD8E541-7886-4A07-B1E1-E4ED1A556B46} = {AA1F96F6-EFD9-4B77-9AC1-856EF19155DB}
 		{765E9C06-B771-43F7-8D1B-9A6EC8A20174} = {77AB634E-18A0-48BD-8300-90E140BB06C8}
 		{086A47D9-C100-4694-8E39-D318B4963BDC} = {77AB634E-18A0-48BD-8300-90E140BB06C8}
+		{11594139-9BDA-4DC7-9936-3556067C6B8A} = {814DA49D-53E4-4339-8C9C-D2DC31C77CD2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1BA4116B-2F15-422F-8A76-09AF7821B4CB}
