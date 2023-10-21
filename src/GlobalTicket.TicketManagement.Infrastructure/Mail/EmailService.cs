@@ -13,7 +13,7 @@ public class EmailService : IEmailService
         _emailSettings = emailSettings;
     }
 
-    public Task<bool> SendEmail(Email email)
+    public async Task<bool> SendEmail(Email email)
     {
 
         var client = new SendGridClient(_emailSettings.ApiKey);

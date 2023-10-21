@@ -1,6 +1,7 @@
 ﻿using GlobalTicket.CelanArch.Application;
 using GlobalTicket.TicketManagement.Infrastructure;
 using GlobalTicket.TicketManagement.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace GlobalTicket.TicketManagement.API;
 
@@ -33,5 +34,24 @@ public static class StartupExtensions
         app.MapControllers();
 
         return app;
+    }
+
+    public static async Task ResetDatabaseAsync(this WebApplication app)
+    {
+        using var scope = app.Services.CreateScope();
+        try
+        {
+            var context = scope.ServiceProvider.GetService<GlobalTicketDbContext>();
+            if (context != null)
+            {
+                await context.Database.EnsureDeletedAsync();
+                await context.Database.MigrateAsync();
+            }
+        }
+        catch (Exception ex)
+        {
+            var logger = scope.ServiceProvider.GetRequiredService<ILogger>();
+            logger.LogError(ex, "An error occurred while migrating the database.");
+        }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using GlobalTicket.CelanArch.Application.Contracts.Infrastructure;
+using GlobalTicket.CelanArch.Application.Models.Mail;
+using GlobalTicket.TicketManagement.Infrastructure.Mail;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
