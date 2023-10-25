@@ -3,6 +3,7 @@ using GlobalTicket.CelanArch.Application.Features.Events.Commands.DeleteEvent;
 using GlobalTicket.CelanArch.Application.Features.Events.Commands.UpdateEvent;
 using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventDetail;
 using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventList;
+using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventsExport;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -61,5 +62,13 @@ public class EventsController : Controller
         var deleteEventCommand = new DeleteEventCommand() { EventId = id };
         await _mediator.Send(deleteEventCommand);
         return NoContent();
+    }
+
+    [HttpGet("export", Name = "ExportEvents")]
+    public async Task<FileResult> ExportEvents()
+    {
+        var fileDto = await _mediator.Send(new GetEventsExportQuery());
+
+        return File(fileDto.Data, fileDto.CountType, fileDto.EventExportFileName);
     }
 }
