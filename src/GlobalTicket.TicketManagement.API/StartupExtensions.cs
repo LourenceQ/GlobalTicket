@@ -1,4 +1,5 @@
 ﻿using GlobalTicket.CelanArch.Application;
+using GlobalTicket.TicketManagement.API.Utility;
 using GlobalTicket.TicketManagement.Infrastructure;
 using GlobalTicket.TicketManagement.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,8 @@ public static class StartupExtensions
 {
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
+        AddSwagger(builder.Services);
+
         builder.Services.AddApplicationServices();
         builder.Services.AddInfrastructureServices(builder.Configuration);
         builder.Services.AddPersistenceServices(builder.Configuration);
@@ -25,6 +28,16 @@ public static class StartupExtensions
 
     public static WebApplication ConfigurePipeline(this WebApplication app)
     {
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json"
+                    , "GlobalTicker Ticker Management API");
+            });
+        }
+
         app.UseHttpsRedirection();
 
         app.UseRouting();
@@ -34,6 +47,20 @@ public static class StartupExtensions
         app.MapControllers();
 
         return app;
+    }
+
+    private static void AddSwagger(IServiceCollection services)
+    {
+        services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+            {
+                Version = "v1",
+                Title = "GlobalTicker Ticket Managment API"
+            });
+
+            c.OperationFilter<FileResultContentTypeOperationFilter>();
+        });
     }
 
     public static async Task ResetDatabaseAsync(this WebApplication app)

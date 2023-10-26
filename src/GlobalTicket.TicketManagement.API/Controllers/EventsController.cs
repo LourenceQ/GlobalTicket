@@ -4,6 +4,7 @@ using GlobalTicket.CelanArch.Application.Features.Events.Commands.UpdateEvent;
 using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventDetail;
 using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventList;
 using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventsExport;
+using GlobalTicket.TicketManagement.API.Utility;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -65,10 +66,11 @@ public class EventsController : Controller
     }
 
     [HttpGet("export", Name = "ExportEvents")]
+    [FileResultContentType("text/csv")]
     public async Task<FileResult> ExportEvents()
     {
         var fileDto = await _mediator.Send(new GetEventsExportQuery());
 
-        return File(fileDto.Data, fileDto.CountType, fileDto.EventExportFileName);
+        return File(fileDto.Data, fileDto.ContentType, fileDto.EventExportFileName);
     }
 }
