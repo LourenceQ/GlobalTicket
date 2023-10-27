@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using GlobalTicket.CelanArch.Application.Contracts.Persistance;
+using GloboTicket.TicketManagement.Application.Exceptions;
 using GloboTicket.TicketManagement.Domain.Entities;
 using MediatR;
-using System.ComponentModel.DataAnnotations;
 
 namespace GlobalTicket.CelanArch.Application.Features.Events.Commands.UpdateEvent;
 public class UpdateEventCommandHandler : IRequestHandler<UpdateEventCommand>
@@ -20,7 +20,7 @@ public class UpdateEventCommandHandler : IRequestHandler<UpdateEventCommand>
     {
 
         var eventToUpdate = await _eventRepository.GetByIdAsync(request.EventId);
-        /*if (eventToUpdate == null)
+        if (eventToUpdate == null)
         {
             throw new NotFoundException(nameof(Event), request.EventId);
         }
@@ -29,7 +29,7 @@ public class UpdateEventCommandHandler : IRequestHandler<UpdateEventCommand>
         var validationResult = await validator.ValidateAsync(request);
 
         if (validationResult.Errors.Count > 0)
-            throw new ValidationException(validationResult);*/
+            throw new ValidationException(validationResult);
 
         _mapper.Map(request, eventToUpdate, typeof(UpdateEventCommand), typeof(Event));
 
