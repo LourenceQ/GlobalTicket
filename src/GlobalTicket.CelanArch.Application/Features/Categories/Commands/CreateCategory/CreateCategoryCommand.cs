@@ -1,7 +1,7 @@
-﻿using GloboTicket.TicketManagement.Application.Responses;
+﻿using GlobalTicket.TicketManagement.Application.Responses;
 using MediatR;
 
-namespace GloboTicket.TicketManagement.Application.Features.Categories.Commands.CreateCateogry;
+namespace GlobalTicket.TicketManagement.Application.Features.Categories.Commands.CreateCateogry;
 
 public class CreateCategoryCommand : IRequest<CreateCategoryCommandResponse>
 {

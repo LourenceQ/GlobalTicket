@@ -11,7 +11,7 @@ public static class PersistenceServiceRegistration
         , IConfiguration configuration)
     {
         services.AddDbContext<GlobalTicketDbContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("GloboTicketTicketManagementConnectionString")));
+            options.UseSqlServer(configuration.GetConnectionString("GlobalTicketTicketManagementConnectionString")));
 
         services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
 

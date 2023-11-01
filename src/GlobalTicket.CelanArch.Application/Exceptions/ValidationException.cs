@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Results;
 
-namespace GloboTicket.TicketManagement.Application.Exceptions
+namespace GlobalTicket.TicketManagement.Application.Exceptions
 {
     public class ValidationException : Exception
     {

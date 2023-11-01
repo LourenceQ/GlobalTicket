@@ -1,7 +1,7 @@
 ﻿using GlobalTicket.CelanArch.Application.Features.Categories.Queries.GetCategoriesList;
 using GlobalTicket.CelanArch.Application.Features.Categories.Queries.GetCategoriesListWithEvents;
-using GloboTicket.TicketManagement.Application.Features.Categories.Commands.CreateCateogry;
-using GloboTicket.TicketManagement.Application.Responses;
+using GlobalTicket.TicketManagement.Application.Features.Categories.Commands.CreateCateogry;
+using GlobalTicket.TicketManagement.Application.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

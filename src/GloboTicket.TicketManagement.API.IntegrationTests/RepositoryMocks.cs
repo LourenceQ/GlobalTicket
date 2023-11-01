@@ -1,8 +1,8 @@
 ﻿using GlobalTicket.CelanArch.Application.Contracts.Persistance;
-using GloboTicket.TicketManagement.Domain.Entities;
+using GlobalTicket.TicketManagement.Domain.Entities;
 using Moq;
 
-namespace GloboTicket.TicketManagement.API.IntegrationTests;
+namespace GlobalTicket.TicketManagement.API.IntegrationTests;
 public class RepositoryMocks
 {
     public static Mock<IAsyncRepository<Category>> GetCategoryRepository()

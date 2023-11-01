@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using GlobalTicket.CelanArch.Application.Contracts.Infrastructure;
 using GlobalTicket.CelanArch.Application.Contracts.Persistance;
-using GloboTicket.TicketManagement.Domain.Entities;
+using GlobalTicket.TicketManagement.Domain.Entities;
 using MediatR;
 
 namespace GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventsExport;

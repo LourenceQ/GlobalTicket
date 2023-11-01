@@ -2,11 +2,11 @@
 using GlobalTicket.CelanArch.Application.Contracts.Persistance;
 using GlobalTicket.CelanArch.Application.Features.Categories.Queries.GetCategoriesList;
 using GlobalTicket.CelanArch.Application.Profiles;
-using GloboTicket.TicketManagement.Domain.Entities;
+using GlobalTicket.TicketManagement.Domain.Entities;
 using Moq;
 using Shouldly;
 
-namespace GloboTicket.TicketManagement.API.IntegrationTests.Categories.Queries;
+namespace GlobalTicket.TicketManagement.API.IntegrationTests.Categories.Queries;
 public class GetCategoriesListQueryHandlerTests
 {
     private readonly IMapper _mapper;
@@ -32,6 +32,8 @@ public class GetCategoriesListQueryHandlerTests
             CancellationToken.None);
 
         result.ShouldBeOfType<List<CategoryListVm>>();
+
+        result.Count.ShouldBe(1);
     }
 
 }

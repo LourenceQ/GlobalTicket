@@ -7,8 +7,8 @@ using GlobalTicket.CelanArch.Application.Features.Events.Commands.UpdateEvent;
 using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventDetail;
 using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventList;
 using GlobalTicket.CelanArch.Application.Features.Events.Queries.GetEventsExport;
-using GloboTicket.TicketManagement.Application.Features.Categories.Commands.CreateCateogry;
-using GloboTicket.TicketManagement.Domain.Entities;
+using GlobalTicket.TicketManagement.Application.Features.Categories.Commands.CreateCateogry;
+using GlobalTicket.TicketManagement.Domain.Entities;
 
 namespace GlobalTicket.CelanArch.Application.Profiles;
 

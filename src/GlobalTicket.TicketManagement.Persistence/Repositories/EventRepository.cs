@@ -1,5 +1,5 @@
 ﻿using GlobalTicket.CelanArch.Application.Contracts.Persistance;
-using GloboTicket.TicketManagement.Domain.Entities;
+using GlobalTicket.TicketManagement.Domain.Entities;
 
 namespace GlobalTicket.TicketManagement.Persistence.Repositories;
 

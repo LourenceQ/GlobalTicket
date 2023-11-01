@@ -1,4 +1,4 @@
-﻿namespace GloboTicket.TicketManagement.Application.Features.Categories.Commands.CreateCateogry;
+﻿namespace GlobalTicket.TicketManagement.Application.Features.Categories.Commands.CreateCateogry;
 
 public class CreateCategoryDto
 {

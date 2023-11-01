@@ -2,7 +2,7 @@
 using GlobalTicket.CelanArch.Application.Contracts.Infrastructure;
 using GlobalTicket.CelanArch.Application.Contracts.Persistance;
 using GlobalTicket.CelanArch.Application.Models.Mail;
-using GloboTicket.TicketManagement.Domain.Entities;
+using GlobalTicket.TicketManagement.Domain.Entities;
 using MediatR;
 
 namespace GlobalTicket.CelanArch.Application.Features.Events.Commands.CreateEvent;
@@ -27,7 +27,7 @@ public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand, Gui
         var validationResult = await validator.ValidateAsync(request);
 
         if (validationResult.Errors.Count > 0)
-            throw new GloboTicket.TicketManagement.Application.Exceptions.ValidationException(validationResult);
+            throw new GlobalTicket.TicketManagement.Application.Exceptions.ValidationException(validationResult);
 
         var email = new Email()
         {
