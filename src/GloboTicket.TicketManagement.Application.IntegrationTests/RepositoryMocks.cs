@@ -16,9 +16,26 @@ public class RepositoryMocks
         {
             new Category
             {
-                CategoryId = concertGuid, Name = "Concerts"
+                CategoryId = concertGuid,
+                Name = "Concerts"
+            },
+            new Category
+            {
+                CategoryId = musicalGuid,
+                Name = "Musicals"
+            },
+            new Category
+            {
+                CategoryId = conferenceGuid,
+                Name = "Conferences"
+            },
+                new Category
+            {
+                CategoryId = playGuid,
+                Name = "Plays"
             }
-        };
+            };
+
         var mockCategoryRepository = new Mock<IAsyncRepository<Category>>();
         mockCategoryRepository.Setup(repo => repo.ListAllAsync()).ReturnsAsync(categories);
 

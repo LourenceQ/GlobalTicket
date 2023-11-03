@@ -33,7 +33,7 @@ public class GetCategoriesListQueryHandlerTests
 
         result.ShouldBeOfType<List<CategoryListVm>>();
 
-        result.Count.ShouldBe(1);
+        result.Count.ShouldBe(5);
     }
 
 }
