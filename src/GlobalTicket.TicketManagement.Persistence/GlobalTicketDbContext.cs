@@ -1,15 +1,23 @@
-﻿using GlobalTicket.TicketManagement.Domain.Common;
+﻿using GlobalTicket.CelanArch.Application.Contracts;
+using GlobalTicket.TicketManagement.Domain.Common;
 using GlobalTicket.TicketManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace GlobalTicket.TicketManagement.Persistence;
 public class GlobalTicketDbContext : DbContext
 {
+    private readonly ILoggedInUserService _loggedInUserService;
     public GlobalTicketDbContext(DbContextOptions<GlobalTicketDbContext> options)
            : base(options)
     {
     }
 
+    public GlobalTicketDbContext(DbContextOptions options
+        , ILoggedInUserService loggedInUserService)
+        : base(options)
+    {
+        _loggedInUserService = loggedInUserService;
+    }
 
     public DbSet<Event> Events { get; set; }
     public DbSet<Category> Categories { get; set; }
