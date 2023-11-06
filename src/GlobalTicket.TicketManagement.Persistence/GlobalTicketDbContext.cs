@@ -198,9 +198,11 @@ public class GlobalTicketDbContext : DbContext
             {
                 case EntityState.Added:
                     entry.Entity.CreatedDate = DateTime.Now;
+                    entry.Entity.CreatedBy = _loggedInUserService.UserId;
                     break;
                 case EntityState.Modified:
                     entry.Entity.LastModifiedDate = DateTime.Now;
+                    entry.Entity.LastModifiedBy = _loggedInUserService.UserId;
                     break;
             }
         }
