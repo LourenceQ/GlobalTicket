@@ -1,4 +1,6 @@
 ﻿using GlobalTicket.CelanArch.Application;
+using GlobalTicket.CelanArch.Application.Contracts;
+using GlobalTicket.TicketManagement.API.Services;
 using GlobalTicket.TicketManagement.API.Utility;
 using GlobalTicket.TicketManagement.Infrastructure;
 using GlobalTicket.TicketManagement.Persistence;
@@ -16,6 +18,8 @@ public static class StartupExtensions
         builder.Services.AddInfrastructureServices(builder.Configuration);
         builder.Services.AddPersistenceServices(builder.Configuration);
 
+        builder.Services.AddScoped<ILoggedInUserService, LoggedInUserService>();
+        builder.Services.AddHttpContextAccessor();
         builder.Services.AddControllers();
 
         builder.Services.AddCors(options =>

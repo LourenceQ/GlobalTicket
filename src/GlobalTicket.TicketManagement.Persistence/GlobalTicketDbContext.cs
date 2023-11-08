@@ -19,9 +19,9 @@ public class GlobalTicketDbContext : DbContext
         _loggedInUserService = loggedInUserService;
     }
 
-    public DbSet<Event> Events { get; set; }
-    public DbSet<Category> Categories { get; set; }
-    public DbSet<Order> Orders { get; set; }
+    public DbSet<Event> Events => Set<Event>();
+    public DbSet<Category> Categories => Set<Category>();
+    public DbSet<Order> Orders => Set<Order>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
